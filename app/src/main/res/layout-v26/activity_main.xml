@@ -35,6 +35,7 @@
         android:ems="10"
         android:focusable="false"
         android:hint="@string/result"
+        android:importantForAutofill="no"
         android:inputType="numberSigned|numberDecimal"
         android:textAlignment="textEnd"
         android:textSize="24sp"
@@ -42,7 +43,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:focusableInTouchMode="false"
-        android:importantForAutofill="no"
         tools:focusedByDefault="false" />
 
     <TextView
@@ -66,6 +66,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="@string/enter_number"
+        android:importantForAutofill="no"
         android:inputType="numberSigned|numberDecimal"
         android:textAlignment="textEnd"
         android:textSize="24sp"

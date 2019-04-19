@@ -38,4 +38,6 @@
     <string name="rad">Rad</string>
     <string name="about">About</string>
     <string name="contents">Contents</string>
+    <string name="result">result</string>
+    <string name="enter_number">enter_number</string>
 </resources>
