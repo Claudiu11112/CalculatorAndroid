@@ -38,32 +38,32 @@ public class MainActivity extends AppCompatActivity {
 
         handler.postDelayed(r, FIVE_MINUTES);
 
-        eTnr2 = (EditText) findViewById(R.id.result);
-        eTnr1 = (EditText) findViewById(R.id.newNumber);
-        tVoperatie = (TextView) findViewById(R.id.operation);
+        eTnr2 = findViewById(R.id.result);
+        eTnr1 = findViewById(R.id.newNumber);
+        tVoperatie = findViewById(R.id.operation);
 
-        Button btn0 = (Button) findViewById(R.id.button0);
-        Button btn1 = (Button) findViewById(R.id.button1);
-        Button btn2 = (Button) findViewById(R.id.button2);
-        Button btn3 = (Button) findViewById(R.id.button3);
-        Button btn4 = (Button) findViewById(R.id.button4);
-        Button btn5 = (Button) findViewById(R.id.button5);
-        Button btn6 = (Button) findViewById(R.id.button6);
-        Button btn7 = (Button) findViewById(R.id.button7);
-        Button btn8 = (Button) findViewById(R.id.button8);
-        Button btn9 = (Button) findViewById(R.id.button9);
+        Button btn0 = findViewById(R.id.button0);
+        Button btn1 = findViewById(R.id.button1);
+        Button btn2 = findViewById(R.id.button2);
+        Button btn3 = findViewById(R.id.button3);
+        Button btn4 = findViewById(R.id.button4);
+        Button btn5 = findViewById(R.id.button5);
+        Button btn6 = findViewById(R.id.button6);
+        Button btn7 = findViewById(R.id.button7);
+        Button btn8 = findViewById(R.id.button8);
+        Button btn9 = findViewById(R.id.button9);
 
-        Button btnDot = (Button) findViewById(R.id.buttonDot);
-        Button buttonDivide = (Button) findViewById(R.id.buttonDivide);
-        Button buttonMultiply = (Button) findViewById(R.id.buttonMultiply);
-        Button buttonMinus = (Button) findViewById(R.id.buttonMinus);
-        Button buttonPlus = (Button) findViewById(R.id.buttonPlus);
-        Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
-        Button buttonProcent = (Button) findViewById(R.id.btnProcent);
-        Button btnRad = (Button) findViewById(R.id.btnRadical);
+        Button btnDot = findViewById(R.id.buttonDot);
+        Button buttonDivide = findViewById(R.id.buttonDivide);
+        Button buttonMultiply = findViewById(R.id.buttonMultiply);
+        Button buttonMinus = findViewById(R.id.buttonMinus);
+        Button buttonPlus = findViewById(R.id.buttonPlus);
+        Button buttonEquals = findViewById(R.id.buttonEquals);
+        Button buttonProcent = findViewById(R.id.btnProcent);
+        Button btnRad = findViewById(R.id.btnRadical);
 
-        Button btnC = (Button) findViewById(R.id.btnC);
-        Button btnCE = (Button) findViewById(R.id.btnCE);
+        Button btnC = findViewById(R.id.btnC);
+        Button btnCE = findViewById(R.id.btnCE);
 
         btnCE.setOnClickListener(new View.OnClickListener() {
             @Override
