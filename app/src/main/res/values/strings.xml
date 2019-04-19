@@ -36,4 +36,6 @@
     <string name="ce2">CE</string>
     <string name="procent">%</string>
     <string name="rad">Rad</string>
+    <string name="about">About</string>
+    <string name="contents">Contents</string>
 </resources>
