@@ -1,8 +1,10 @@
 package com.example.myth.calculator;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String s = eTnr1.getText().toString();
-                if (s != null & s.length() > 0) {
+                if (s.length() > 0) {
                     s = s.substring(0, s.length() - 1);
                     eTnr1.setText(s);
                 }
@@ -175,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle b) {
+    protected void onRestoreInstanceState(@NonNull Bundle b) {
         super.onRestoreInstanceState(b);
         sOperatie = b.getString(SAVE_OPERATIE);
         if (dBuff != null)
@@ -183,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
         tVoperatie.setText(sOperatie);
     }
 
+    @SuppressLint("SetTextI18n")
     private void performOperation(Double dNr1, String sOperatie) {
         if (null == dBuff) {
             dBuff = dNr1;
@@ -194,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
 
             switch (this.sOperatie) {
                 case "=":
+                case "%":
                     dBuff = dNr1;
                     break;
                 case "/":
@@ -216,9 +220,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "+":
                     dBuff += dNr1;
-                    break;
-                case "%":
-                    dBuff = dNr1;
                     break;
                 case "Rad":
                     dBuff = Math.sqrt(dNr1);
