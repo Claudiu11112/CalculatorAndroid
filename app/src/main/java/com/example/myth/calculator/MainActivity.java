@@ -32,11 +32,7 @@ public class MainActivity extends AppCompatActivity {
         final long FIVE_MINUTES = 1000 * 60 * 8;
         Handler handler = new Handler();
 
-        final Runnable r = new Runnable() {
-            public void run() {
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-            }
-        };
+        final Runnable r = () -> getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         handler.postDelayed(r, FIVE_MINUTES);
 
@@ -67,43 +63,34 @@ public class MainActivity extends AppCompatActivity {
         Button btnC = findViewById(R.id.btnC);
         Button btnCE = findViewById(R.id.btnCE);
 
-        btnCE.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String s = eTnr1.getText().toString();
-                if (s.length() > 0) {
-                    s = s.substring(0, s.length() - 1);
-                    eTnr1.setText(s);
-                }
+        btnCE.setOnClickListener(v -> {
+            String s = eTnr1.getText().toString();
+            if (s.length() > 0) {
+                s = s.substring(0, s.length() - 1);
+                eTnr1.setText(s);
             }
         });
 
 
-        View.OnClickListener vocl = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (eTnr2 != null) {
-                    eTnr2.setText("");
-                    dBuff = null;
-                }
-                if (eTnr1 != null) {
-                    eTnr1.setText("");
-                    dBuff = null;
-                }
-                if (!sOperatie.equals("=")) {
-                    sOperatie = "=";
-                    tVoperatie.setText(sOperatie);
-                }
+        View.OnClickListener vocl = view -> {
+            if (eTnr2 != null) {
+                eTnr2.setText("");
+                dBuff = null;
+            }
+            if (eTnr1 != null) {
+                eTnr1.setText("");
+                dBuff = null;
+            }
+            if (!sOperatie.equals("=")) {
+                sOperatie = "=";
+                tVoperatie.setText(sOperatie);
             }
         };
         btnC.setOnClickListener(vocl);
 
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Button b = (Button) view;
-                eTnr1.append(b.getText().toString());
-            }
+        View.OnClickListener listener = view -> {
+            Button b = (Button) view;
+            eTnr1.append(b.getText().toString());
         };
         btn0.setOnClickListener(listener);
         btn1.setOnClickListener(listener);
@@ -117,21 +104,18 @@ public class MainActivity extends AppCompatActivity {
         btn9.setOnClickListener(listener);
         btnDot.setOnClickListener(listener);
 
-        View.OnClickListener opListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Button b = (Button) view;
-                String sOperatie = b.getText().toString();
-                String value = eTnr1.getText().toString();
-                try {
-                    Double doubleValue = Double.valueOf(value);
-                    performOperation(doubleValue, sOperatie);
-                } catch (NumberFormatException nfe) {
-                    eTnr1.setText("");
-                }
-                MainActivity.this.sOperatie = sOperatie;
-                tVoperatie.setText(MainActivity.this.sOperatie);
+        View.OnClickListener opListener = view -> {
+            Button b = (Button) view;
+            String sOperatie = b.getText().toString();
+            String value = eTnr1.getText().toString();
+            try {
+                Double doubleValue = Double.valueOf(value);
+                performOperation(doubleValue, sOperatie);
+            } catch (NumberFormatException nfe) {
+                eTnr1.setText("");
             }
+            MainActivity.this.sOperatie = sOperatie;
+            tVoperatie.setText(MainActivity.this.sOperatie);
         };
         buttonEquals.setOnClickListener(opListener);
         buttonDivide.setOnClickListener(opListener);
