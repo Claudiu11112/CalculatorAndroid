@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
 //                    String s = eTnr1.getText().toString();
 //                    String s2 = eTnr2.getText().toString();
 //                    if (s.length() == 0 && s2.length() == 0){
-//                        eTnr1.setText("-");
+//                         eTnr1.setText("-");
 //                    }else
                     dBuff -= dNr1;
                     break;
