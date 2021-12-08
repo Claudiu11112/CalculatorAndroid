@@ -35,6 +35,8 @@
         android:ems="10"
         android:focusable="false"
         android:hint="@string/result"
+        android:importantForAutofill="no"
+        android:textColorHint="#78909C"
         android:inputType="numberSigned|numberDecimal"
         android:textAlignment="textEnd"
         android:textSize="24sp"
@@ -42,7 +44,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:focusableInTouchMode="false"
-        android:importantForAutofill="no"
         tools:focusedByDefault="false" />
 
     <TextView
@@ -66,13 +67,14 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="@string/enter_number"
+        android:importantForAutofill="no"
+        android:textColorHint="#78909C"
         android:inputType="numberSigned|numberDecimal"
         android:textAlignment="textEnd"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:importantForAutofill="no"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
@@ -178,8 +180,8 @@
         android:id="@+id/buttonDot"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:layout_marginStart="1dp"
         android:text="@string/punctp"
+        android:textColor="#795548"
         app:layout_constraintBaseline_toBaselineOf="@+id/button0"
         app:layout_constraintLeft_toRightOf="@+id/button0" />
 
@@ -205,8 +207,8 @@
         android:id="@+id/buttonEquals"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:layout_marginStart="1dp"
         android:text="@string/egalp"
+        android:textColor="#795548"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonDot"
         app:layout_constraintLeft_toRightOf="@+id/buttonDot" />
 
@@ -214,8 +216,8 @@
         android:id="@+id/buttonMinus"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:layout_marginStart="1dp"
         android:text="@string/minusp"
+        android:textColor="#795548"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintLeft_toRightOf="@+id/button3" />
 

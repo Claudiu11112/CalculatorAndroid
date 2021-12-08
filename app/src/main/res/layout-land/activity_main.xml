@@ -38,6 +38,7 @@
         android:hint="@string/result"
         android:importantForAutofill="no"
         android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintLeft_toLeftOf="@+id/guideline"
@@ -69,6 +70,7 @@
         android:hint="@string/enter_number"
         android:importantForAutofill="no"
         android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -218,8 +220,8 @@
         android:id="@+id/buttonMinus"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
         android:text="@string/minus"
+        android:textColor="#795548"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintLeft_toRightOf="@+id/button3" />
 

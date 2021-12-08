@@ -38,6 +38,8 @@
         android:importantForAutofill="no"
         android:inputType="numberSigned|numberDecimal"
         android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textColorHint="#78909C"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -66,6 +68,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="@string/enter_number"
+        android:textColorHint="#78909C"
         android:importantForAutofill="no"
         android:inputType="numberSigned|numberDecimal"
         android:textAlignment="textEnd"
@@ -178,8 +181,8 @@
         android:id="@+id/buttonDot"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:layout_marginStart="1dp"
         android:text="@string/punctp"
+        android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/button0"
         app:layout_constraintLeft_toRightOf="@+id/button0" />
 
@@ -205,8 +208,8 @@
         android:id="@+id/buttonEquals"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:layout_marginStart="1dp"
         android:text="@string/egalp"
+        android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonDot"
         app:layout_constraintLeft_toRightOf="@+id/buttonDot" />
 
@@ -214,8 +217,8 @@
         android:id="@+id/buttonMinus"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:layout_marginStart="1dp"
         android:text="@string/minusp"
+        android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintLeft_toRightOf="@+id/button3" />
 
